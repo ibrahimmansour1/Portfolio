@@ -1,234 +1,411 @@
+<!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Ibrahim Mansour — Flutter Developer</title>
+    <meta name="description" content="Ibrahim Mansour — Experienced Flutter Developer building beautiful, high-performance mobile applications." />
 
-    <!-- box icons  -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- custom css  -->
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <!-- TODO header design  -->
-    <header class="header">
-      <h2 class="logo">Portfolio</h2>
+    <!-- Ambient background blobs -->
+    <div class="ambient">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+      <a href="#home" class="logo">IM<span>.</span></a>
 
       <i class="bx bx-menu" id="menu-icon"></i>
 
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <!-- TODO home section design  -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <h3>Hello, It's Me</h3>
-        <h1>Ibrahim Mansour</h1>
-        <h3>I'm a <span class="multiple-text"></span></h3>
-        <p>
-          Experienced Flutter developer with expertise in creating visually
-          appealing and responsive Mobile designs.
-        </p>
-        <div class="social-media">
-          <a
-            href="https://www.facebook.com/profile.php?id=100064525956308"
-            target="_blank"
-            ><i class="bx bxl-facebook"></i
-          ></a>
-          <a
-            href="http://api.whatsapp.com/send?phone=0201551124994"
-            target="_blank"
-            ><i class="bx bxl-whatsapp"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/ibrahim-mansour-52146b171/"
-            target="_blank"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Ibrahim Mansour</h1>
+        <div class="hero-role">
+          <span class="typed-text"></span><span class="cursor">|</span>
         </div>
-        <!--social-media-->
-        <a href="images/Ibrahim-Mansour.pdf" class="btn" download
-          >Download CV</a
-        >
-      </div>
-      <!--home-->
+        <p class="hero-desc">
+          Building beautiful, high-performance mobile applications with Flutter.
+          Turning ideas into pixel-perfect, cross-platform experiences.
+        </p>
 
-      <div class="home-img">
-        <img src="./images/mainImg.png" alt="" />
+        <div class="hero-cta">
+          <a href="images/Ibrahim-Mansour.pdf" class="btn btn-primary" download>
+            <i class="bx bx-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="bx bx-envelope"></i> Get in Touch
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/ibrahimmansour1" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ibrahim-mansour-52146b171/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="https://wa.me/201551124994" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="bx bxl-whatsapp"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100064525956308" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="bx bxl-facebook"></i>
+          </a>
+        </div>
       </div>
-      <!--home-img-->
+
+      <div class="hero-visual">
+        <div class="hero-img-wrapper">
+          <img src="./images/mainImg.png" alt="Ibrahim Mansour" />
+        </div>
+      </div>
     </section>
 
-    <!-- TODO about section design  -->
+    <!-- About Section -->
     <section class="about" id="about">
-      <div class="about-img">
-        <img src="images/icon.png" alt="" />
+      <div class="section-header">
+        <p class="section-tag">Get to know me</p>
+        <h2 class="section-title">About <span>Me</span></h2>
       </div>
-      <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Flutter Developer!</h3>
-        <p>
-          passionate about the use of technology in everyday life. I am always
-          on time for organized projects, work-related or otherwise. I am honest
-          and trustworthy. Flexible in my working hours, being able to work
-          evenings and weekends. I have experience working as part of a team and
-          individually.
-        </p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-    </section>
 
-    <!-- TODO services section design  -->
-    <section class="services" id="services">
-      <h2 class="heading">Our <span>Services</span></h2>
-      <div class="services-container">
-        <!-- box-1  -->
-        <div class="services-box">
-          <i class="bx bx-code-alt"></i>
-          <h3>Create an App</h3>
-          <p>
-            Our Flutter service creates customized mobile applications for both
-            iOS and Android platforms. Our expert team designs user-friendly
-            interfaces and develops scalable apps that bring your ideas to life.
-          </p>
-          <a href="#" class="btn">Read More</a>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-img-wrapper">
+            <img src="images/icon.png" alt="Ibrahim Mansour" />
+          </div>
         </div>
-        <!-- box-2  -->
-        <div class="services-box">
-          <i class="bx bxs-paint"></i>
-          <h3>Edit an App</h3>
+
+        <div class="about-text">
+          <h3>Flutter Developer with 4+ Years of Experience</h3>
           <p>
-            Our Flutter service offers seamless app editing, allowing you to
-            update, add features, fix bugs, and improve performance with ease.
-            Our developers work closely with you to understand your requirements
-            and implement changes efficiently.
+            I'm a passionate mobile developer based in Cairo, Egypt, specializing in
+            building cross-platform applications using Flutter & Dart. I focus on
+            creating clean, scalable code with modern architectures like Clean Architecture and MVVM.
           </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-        <!-- box-3  -->
-        <div class="services-box">
-          <i class="bx bx-bar-chart-alt"></i>
-          <h3>Enhance an App</h3>
           <p>
-            Our Flutter service enhances your existing app, making it more
-            competitive and engaging. We analyze performance, user feedback, and
-            market trends to optimize functionality, design, and user
-            experience. Our team integrates advanced features.
+            I've worked on a wide range of projects — from travel booking platforms and
+            e-commerce apps to Islamic educational tools and real-time messaging applications.
+            I'm always eager to take on new challenges and deliver high-quality, user-focused products.
           </p>
-          <a href="#" class="btn">Read More</a>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- TODO portfolio section design  -->
-    <section class="portfolio" id="portfolio">
-      <h2 class="heading">Latest <span>Projects</span></h2>
-      <p class="alarm">
-        All these projects were implemented by myself - Alhamdulillah - click to
-        see!
-      </p>
-      <div class="portfolio-container">
-        <!-- box 1 -->
-        <div class="portfolio-box">
-          <div class="hint">Responsive <i class="bx bx-check"></i></div>
-          <img src="./images/bg-project1.jpg" alt="" />
-          <div class="portfolio-layer">
-            <h4>Bone Marrow</h4>
-            <p>An application controls Transplantation Processes</p>
-            <a
-              href="https://github.com/Omnya-Mohamed/final_project/tree/main/BoneMarrow-main"
-              ><i class="bx bx-link-external"></i
-            ></a>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="section-header">
+        <p class="section-tag">What I work with</p>
+        <h2 class="section-title">Skills & <span>Technologies</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="bx bxl-flutter"></i>
+          <h4>Flutter</h4>
+          <p>Cross-platform mobile development</p>
+        </div>
+        <div class="skill-card">
+          <i class="bx bx-code-curly"></i>
+          <h4>Dart</h4>
+          <p>Primary programming language</p>
+        </div>
+        <div class="skill-card">
+          <i class="bx bxl-firebase"></i>
+          <h4>Firebase</h4>
+          <p>Auth, Firestore, Cloud Functions</p>
+        </div>
+        <div class="skill-card">
+          <i class="bx bx-server"></i>
+          <h4>REST APIs</h4>
+          <p>Integration & API consumption</p>
+        </div>
+        <div class="skill-card">
+          <i class="bx bx-layer"></i>
+          <h4>Clean Architecture</h4>
+          <p>Scalable, maintainable code</p>
+        </div>
+        <div class="skill-card">
+          <i class="bx bx-git-branch"></i>
+          <h4>State Management</h4>
+          <p>Bloc, Cubit, Provider</p>
+        </div>
+        <div class="skill-card">
+          <i class="bx bxl-apple"></i>
+          <h4>iOS & Android</h4>
+          <p>Native platform integration</p>
+        </div>
+        <div class="skill-card">
+          <i class="bx bx-paint"></i>
+          <h4>UI/UX</h4>
+          <p>Responsive & adaptive design</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="section-header">
+        <p class="section-tag">My recent work</p>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./images/bg-project1.jpg" alt="Onvaca" />
+            <div class="project-overlay">
+              <span class="project-badge">Travel</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Onvaca</h3>
+            <p>A comprehensive travel & vacation booking platform with real-time availability, secure payments, and personalized recommendations.</p>
+            <div class="project-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>REST API</span>
+              <span>Stripe</span>
+            </div>
           </div>
         </div>
-        <!-- box 2 -->
-        <div class="portfolio-box">
-          <div class="hint">Responsive <i class="bx bx-check"></i></div>
-          <img src="./images/bg-project3.jpg" alt="" />
-          <div class="portfolio-layer">
-            <h4>Akhbary</h4>
-            <p>An application that Displays daily news and events</p>
-            <a
-              href="https://github.com/Ibrahim58563/new_app/tree/2cc9611204037ae0117d013895bb29e180eb2e4a"
-              ><i class="bx bx-link-external"></i
-            ></a>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./images/bg-project2.jpg" alt="Zad" />
+            <div class="project-overlay">
+              <a href="https://github.com/ibrahimmansour1/zad" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+              </a>
+              <span class="project-badge">Education</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Zad Al-Da'ia</h3>
+            <p>An Islamic educational app providing structured learning resources, multimedia content, and progress tracking for students of knowledge.</p>
+            <div class="project-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Firebase</span>
+            </div>
           </div>
         </div>
-        <!-- box 3 -->
-        <div class="portfolio-box">
-          <div class="hint">Responsive <i class="bx bx-check"></i></div>
-          <img src="./images/bg-project2.jpg" alt="" />
-          <div class="portfolio-layer">
-            <h4>Özbek</h4>
-            <p>An application that translates the Uzbek language</p>
-            <a href="https://github.com/Ibrahim58563/dictionary_uzbek"
-              ><i class="bx bx-link-external"></i
-            ></a>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./images/bg-project3.jpg" alt="Inviting" />
+            <div class="project-overlay">
+              <a href="https://github.com/ibrahimmansour1/inviting" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+              </a>
+              <span class="project-badge">Events</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Inviting</h3>
+            <p>A smart event invitation management app with digital cards, RSVP tracking, guest management, and real-time notifications.</p>
+            <div class="project-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>REST API</span>
+            </div>
           </div>
         </div>
-        <!-- Go to GitHub Anchor -->
-        <a href="https://github.com/ibrahimmansour1" class="more-projects-btn">
-          <span>More Projects</span>
-          <i class="bx bxs-chevrons-right"></i>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./images/flutter-app-developer.jpg" alt="Fresh Mart" />
+            <div class="project-overlay">
+              <a href="https://github.com/ibrahimmansour1/Fresh-Mart" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+              </a>
+              <span class="project-badge">E-Commerce</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Fresh Mart</h3>
+            <p>A full-featured grocery e-commerce app with product browsing, cart management, order tracking, and seamless checkout experience.</p>
+            <div class="project-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./images/flutter2.jpeg" alt="WhatsApp Clone" />
+            <div class="project-overlay">
+              <a href="https://github.com/ibrahimmansour1/whatsapp" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+              </a>
+              <span class="project-badge">Messaging</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>WhatsApp Clone</h3>
+            <p>A real-time messaging application replicating core WhatsApp features including chat, media sharing, and status updates.</p>
+            <div class="project-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="./images/icon.png" alt="Dictionary Uzbek" />
+            <div class="project-overlay">
+              <a href="https://github.com/ibrahimmansour1/dictionary_uzbek" target="_blank" rel="noopener">
+                <i class="bx bx-link-external"></i>
+              </a>
+              <span class="project-badge">Language</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Uzbek Dictionary</h3>
+            <p>A bilingual dictionary app for translating between Uzbek and Arabic with offline support, bookmarks, and search history.</p>
+            <div class="project-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>SQLite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-more">
+        <a href="https://github.com/ibrahimmansour1" class="btn btn-outline" target="_blank" rel="noopener">
+          <i class="bx bxl-github"></i> View All on GitHub
         </a>
       </div>
     </section>
 
-    <!-- TODO contact section design  -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me!</span></h2>
+      <div class="section-header">
+        <p class="section-tag">Let's work together</p>
+        <h2 class="section-title">Get in <span>Touch</span></h2>
+      </div>
 
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Full Name" />
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Have a project in mind or want to collaborate? Feel free to reach out. I'm always open to new opportunities and interesting projects.</p>
+
+          <div class="contact-links">
+            <a href="mailto:ibrahimmansour.dev@gmail.com" class="contact-link">
+              <i class="bx bx-envelope"></i>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">ibrahimmansour.dev@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/201551124994" class="contact-link" target="_blank" rel="noopener">
+              <i class="bx bxl-whatsapp"></i>
+              <div>
+                <span class="contact-link-label">WhatsApp</span>
+                <span class="contact-link-value">+20 155 112 4994</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/ibrahim-mansour-52146b171/" class="contact-link" target="_blank" rel="noopener">
+              <i class="bx bxl-linkedin"></i>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">Ibrahim Mansour</span>
+              </div>
+            </a>
+            <a href="https://github.com/ibrahimmansour1" class="contact-link" target="_blank" rel="noopener">
+              <i class="bx bxl-github"></i>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">ibrahimmansour1</span>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="input-box">
-          <input type="number" placeholder="Mobile" />
-          <input type="text" placeholder="Email Subject" />
-        </div>
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Your Message"
-        ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
-      </form>
+
+        <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" />
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bx bx-send"></i> Send Message
+          </button>
+        </form>
+      </div>
     </section>
 
-    <!-- TODO footer design  -->
+    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-text">
-        <p>Copyright &copy; 2023 by Ebrahim | All Rights Reserved</p>
+      <div class="footer-content">
+        <a href="#home" class="footer-logo">IM<span>.</span></a>
+        <p>&copy; 2026 Ibrahim Mansour. All rights reserved.</p>
       </div>
-
-      <div class="footer-iconTop">
-        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-      </div>
+      <a href="#home" class="scroll-top" aria-label="Scroll to top">
+        <i class="bx bx-up-arrow-alt"></i>
+      </a>
     </footer>
 
-    <!-- scroll reveal  -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- typed js  -->
-    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
-
-    <!-- custom js  -->
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

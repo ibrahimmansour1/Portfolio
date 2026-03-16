@@ -1,88 +1,123 @@
-/*========= Idea [0]: toggle icon navbar =========*/
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
+/* ============================================
+   Portfolio — Main Script
+   ============================================ */
 
-menuIcon.onclick = () => {
-  // ---- [1] convert menu icon to cancle icon ----
-  // [1.1]
-  // bx-x refer to --> <i class='bx bx-x' ></i>
+// ---------- Mobile Navigation ----------
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector("#navbar");
+const navLinks = document.querySelectorAll(".navbar a");
+
+menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
-  // [1.2]
   navbar.classList.toggle("active");
-};
+});
 
-/*========= Idea [1]: scroll sections active link =========*/
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
+// Close mobile nav on link click
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
+  });
+});
 
-window.onscroll = () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+// ---------- Active Link on Scroll ----------
+const sections = document.querySelectorAll("section");
 
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((links) => {
-        links.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
-      });
+function updateActiveLink() {
+  const scrollY = window.scrollY + 200;
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute("id");
+
+    if (scrollY >= top && scrollY < top + height) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      const activeLink = document.querySelector(
+        `.navbar a[href="#${id}"]`
+      );
+      if (activeLink) activeLink.classList.add("active");
     }
   });
-  /*========= Idea [2]: sticky navbar =========*/
-  let header = document.querySelector("header", window.scrollY > 100);
+}
 
-  /*========= Idea [3]: remove toggle icon and navbar when click navbar link (scroll) =========*/
-  menuIcon.classList.remove("bx-x");
-  navbar.classList.remove("active");
-};
+window.addEventListener("scroll", updateActiveLink);
 
-/*========= scroll reveal =========*/
-ScrollReveal({
-  //   reset: true,
-  distance: "80px",
-  duration: 2000,
-  delay: 200,
+// ---------- Header Background on Scroll ----------
+const header = document.querySelector("#header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    header.style.borderBottomColor = "rgba(255, 255, 255, 0.08)";
+  } else {
+    header.style.borderBottomColor = "rgba(255, 255, 255, 0.06)";
+  }
 });
 
-// reveal-1
-ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
-// reveal-2
-ScrollReveal().reveal(
-  ".home-img, .services-container, .portfolio-box, .contact form, .more-projects-btn",
-  { origin: "bottom" }
-);
-// reveal-3
-ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
-// reveal-4
-ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+// ---------- Scroll Reveal Animation ----------
+function initScrollReveal() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+  );
 
-/*========= typed js =========*/
-const typed = new Typed(".multiple-text", {
-  strings: ["Flutter Developer", "Freelancer"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  typeDelay: 1000,
-  loop: true,
-});
+  // Add fade-in class and observe elements
+  const animateSelectors = [
+    ".hero-content",
+    ".hero-visual",
+    ".section-header",
+    ".about-image",
+    ".about-text",
+    ".skill-card",
+    ".project-card",
+    ".contact-info",
+    ".contact-form",
+    ".stat-item",
+  ];
 
+  animateSelectors.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((el, index) => {
+      el.classList.add("fade-in");
+      el.style.transitionDelay = `${index * 0.1}s`;
+      observer.observe(el);
+    });
+  });
+}
 
+initScrollReveal();
 
-//TODO View And Hide Button Idea 
+// ---------- Typed.js ----------
+if (typeof Typed !== "undefined") {
+  new Typed(".typed-text", {
+    strings: [
+      "Flutter Developer",
+      "Mobile App Engineer",
+      "UI/UX Enthusiast",
+      "Freelancer",
+    ],
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 2000,
+    loop: true,
+    showCursor: false,
+  });
+}
 
-// var viewBtn = document.querySelector("#viewBtn");
-// var hideBtn = document.querySelector("#hideBtn");
-// var projectInfo = document.querySelector(".project-info");
-
-// projectInfo.style.display = "none";
-// viewBtn.addEventListener("click", () => {
-//   projectInfo.style.display = "flex";
-// });
-// hideBtn.addEventListener("click", () => {
-//   projectInfo.style.display = "none";
-// });
-
-
-
+// ---------- Cursor Blink Sync ----------
+// Hide custom cursor when typed.js is active
+const cursorEl = document.querySelector(".cursor");
+if (cursorEl) {
+  const typedEl = document.querySelector(".typed-text");
+  const checkTyped = () => {
+    if (typedEl && typedEl.textContent.length > 0) {
+      cursorEl.style.display = "inline";
+    }
+  };
+  setInterval(checkTyped, 500);
+}
