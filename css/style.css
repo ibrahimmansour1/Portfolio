@@ -703,8 +703,18 @@ body.rtl .about-text h3 { letter-spacing: 0; }
   height: 18rem;
 }
 
-.featured-grid .project-card-header i {
-  font-size: 6.5rem;
+.featured-grid .device-frame {
+  width: 9.6rem;
+  height: 15rem;
+}
+
+.featured-grid .card-app-icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+.featured-grid .card-app-icon i {
+  font-size: 3rem;
 }
 
 .featured-grid .project-info {
@@ -750,14 +760,136 @@ body.rtl .about-text h3 { letter-spacing: 0; }
   background: var(--gradient, linear-gradient(135deg, #7c5cfc, #ff6b9d));
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1.8rem 2.2rem;
   overflow: hidden;
 }
 
-.project-card-header i {
-  font-size: 5rem;
-  color: rgba(255, 255, 255, 0.3);
+/* Subtle noise texture overlay */
+.project-card-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
 }
+
+/* Left meta area */
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 1;
+  flex: 1;
+}
+
+.card-app-icon {
+  width: 5rem;
+  height: 5rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  border-radius: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-app-icon i {
+  font-size: 2.6rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.card-label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Device Frame Mockup ── */
+.device-frame {
+  width: 8.4rem;
+  height: 13rem;
+  border: 2.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 1.8rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+/* notch */
+.device-frame::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.4rem;
+  height: 0.35rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  z-index: 10;
+}
+
+.device-screen {
+  position: absolute;
+  inset: 0;
+  padding: 1.6rem 0.7rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Skeleton UI pieces */
+.ds-bar {
+  height: 0.6rem;
+  border-radius: 0.3rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+.ds-bar.w-full  { width: 100%; }
+.ds-bar.w-75    { width: 75%; }
+.ds-bar.w-55    { width: 55%; }
+.ds-bar.w-40    { width: 40%; }
+.ds-bar.thin    { height: 0.4rem; }
+.ds-bar.thick   { height: 0.9rem; }
+
+.ds-block {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.6rem;
+}
+
+.ds-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.ds-circle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.ds-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.ds-grid .ds-block {
+  height: 3.2rem;
+}
+
+.ds-spacer { flex: 1; }
 
 .project-badge {
   position: absolute;
