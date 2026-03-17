@@ -30,16 +30,16 @@ const translations = {
   "about-title-1": { en: "About ", ar: "عن " },
   "about-title-2": { en: "Me", ar: "نفسي" },
   "about-h3": {
-    en: "Flutter Developer with 4+ Years of Experience",
-    ar: "مطور Flutter بخبرة تتجاوز 4 سنوات",
+    en: "Flutter Developer with 2+ Years of Experience",
+    ar: "مطور Flutter بخبرة تتجاوز سنتين",
   },
   "about-p1": {
     en: "I'm a passionate mobile developer based in Cairo, Egypt, specializing in building cross-platform applications using Flutter & Dart. I focus on creating clean, scalable code with modern architectures like Clean Architecture and MVVM.",
     ar: "أنا مطور تطبيقات جوال شغوف من القاهرة، مصر. متخصص في بناء تطبيقات متعددة المنصات باستخدام Flutter و Dart. أركز على كتابة كود نظيف وقابل للتوسع باستخدام أنماط معمارية حديثة مثل Clean Architecture و MVVM.",
   },
   "about-p2": {
-    en: "I've delivered 40+ projects across diverse industries — from travel booking platforms and fintech apps to healthcare systems, e-commerce marketplaces, and Islamic educational tools. I thrive on challenging projects and always deliver high-quality, user-focused products.",
-    ar: "قدمت أكثر من 40 مشروعاً في مختلف المجالات — من منصات حجز السفر وتطبيقات التكنولوجيا المالية إلى أنظمة الرعاية الصحية والأسواق الإلكترونية والتطبيقات التعليمية الإسلامية. أستمتع بالتحديات وأسعى دائماً لتقديم منتجات عالية الجودة.",
+    en: "I've delivered 25+ projects across diverse industries — from travel booking platforms and fintech apps to healthcare systems, e-commerce marketplaces, and Islamic educational tools. I thrive on challenging projects and always deliver high-quality, user-focused products.",
+    ar: "قدمت أكثر من 25 مشروعاً في مختلف المجالات — من منصات حجز السفر وتطبيقات التكنولوجيا المالية إلى أنظمة الرعاية الصحية والأسواق الإلكترونية والتطبيقات التعليمية الإسلامية. أستمتع بالتحديات وأسعى دائماً لتقديم منتجات عالية الجودة.",
   },
   "stat-years": { en: "Years Experience", ar: "سنوات خبرة" },
   "stat-projects": { en: "Projects Delivered", ar: "مشروع تم تسليمه" },
