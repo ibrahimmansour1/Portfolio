@@ -768,7 +768,8 @@ body.rtl .project-badge { right: auto; left: 1.2rem; }
 
 .project-links {
   display: flex;
-  gap: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
   margin-bottom: 1.2rem;
 }
 
@@ -776,28 +777,41 @@ body.rtl .project-badge { right: auto; left: 1.2rem; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 0.4rem 1rem;
-  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10rem;
   transition: var(--transition);
-  border: 1px solid var(--border);
+  border: none;
+  color: #fff;
 }
 
 .project-links a:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
 }
 
 .project-links a i { font-size: 1.4rem; }
 
-.project-links .link-playstore { color: #34a853; }
-.project-links .link-playstore:hover { background: rgba(52, 168, 83, 0.08); border-color: #34a853; }
-.project-links .link-appstore { color: #007aff; }
-.project-links .link-appstore:hover { background: rgba(0, 122, 255, 0.08); border-color: #007aff; }
-.project-links .link-github { color: #555; }
-.project-links .link-github:hover { background: rgba(0, 0, 0, 0.05); border-color: #555; }
-.project-links .link-web { color: var(--accent); }
-.project-links .link-web:hover { background: rgba(124, 92, 252, 0.08); border-color: var(--accent); }
+.project-links .link-playstore {
+  background: linear-gradient(135deg, #34a853, #0f9d58);
+  box-shadow: 0 3px 10px rgba(52, 168, 83, 0.25);
+}
+
+.project-links .link-appstore {
+  background: linear-gradient(135deg, #007aff, #0055d4);
+  box-shadow: 0 3px 10px rgba(0, 122, 255, 0.25);
+}
+
+.project-links .link-github {
+  background: linear-gradient(135deg, #333, #555);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project-links .link-web {
+  background: var(--gradient);
+  box-shadow: 0 3px 10px rgba(124, 92, 252, 0.25);
+}
 
 .project-tech {
   display: flex;
