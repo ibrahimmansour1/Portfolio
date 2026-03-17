@@ -766,6 +766,39 @@ body.rtl .project-badge { right: auto; left: 1.2rem; }
   overflow: hidden;
 }
 
+.project-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+  border: 1px solid var(--border);
+}
+
+.project-links a:hover {
+  transform: translateY(-1px);
+}
+
+.project-links a i { font-size: 1.4rem; }
+
+.project-links .link-playstore { color: #34a853; }
+.project-links .link-playstore:hover { background: rgba(52, 168, 83, 0.08); border-color: #34a853; }
+.project-links .link-appstore { color: #007aff; }
+.project-links .link-appstore:hover { background: rgba(0, 122, 255, 0.08); border-color: #007aff; }
+.project-links .link-github { color: #555; }
+.project-links .link-github:hover { background: rgba(0, 0, 0, 0.05); border-color: #555; }
+.project-links .link-web { color: var(--accent); }
+.project-links .link-web:hover { background: rgba(124, 92, 252, 0.08); border-color: var(--accent); }
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
