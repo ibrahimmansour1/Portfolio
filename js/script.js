@@ -935,4 +935,21 @@ function animateCounters() {
 
 animateCounters();
 
+// ==========================================
+// CONTACT FORM (mailto)
+// ==========================================
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = contactForm.querySelector('[name="name"]').value;
+    const email = contactForm.querySelector('[name="email"]').value;
+    const subject = contactForm.querySelector('[name="subject"]').value;
+    const message = contactForm.querySelector('[name="message"]').value;
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const mailto = `mailto:ibrahimmansour58563@gmail.com?subject=${encodeURIComponent(subject || "Portfolio Contact")}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
+}
+
 // Initialize
