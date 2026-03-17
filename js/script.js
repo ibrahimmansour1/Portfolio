@@ -62,7 +62,7 @@ const translations = {
   "projects-tag": { en: "My work", ar: "أعمالي" },
   "projects-title-1": { en: "Projects ", ar: "معرض " },
   "projects-title-2": { en: "Portfolio", ar: "المشاريع" },
-  "projects-subtitle": { en: "40+ projects delivered across multiple industries", ar: "أكثر من 40 مشروع تم تسليمه في مختلف المجالات" },
+  "projects-subtitle": { en: "25+ projects delivered across multiple industries", ar: "أكثر من 25 مشروع تم تسليمه في مختلف المجالات" },
   "filter-all": { en: "All", ar: "الكل" },
   "filter-travel": { en: "Travel & Real Estate", ar: "السفر والعقارات" },
   "filter-food": { en: "Food & Delivery", ar: "الطعام والتوصيل" },
@@ -172,15 +172,15 @@ const projectData = {
     },
   },
   greenz: {
-    name: { en: "Greenz", ar: "جرينز" },
-    badge: { en: "Grocery", ar: "بقالة" },
+    name: { en: "Greenz Ecosystem", ar: "منظومة جرينز" },
+    badge: { en: "Grocery Ecosystem", ar: "منظومة بقالة" },
     desc: {
-      en: "Grocery e-commerce app with product categories, shopping cart, order management, delivery addresses, promotional ads, and secure checkout system.",
-      ar: "تطبيق بقالة إلكتروني مع تصنيفات المنتجات، سلة التسوق، إدارة الطلبات، عناوين التوصيل، إعلانات ترويجية، ونظام دفع آمن.",
+      en: "Full grocery platform with 3 interconnected apps: Customer app for product browsing, cart & ordering; Delivery app for drivers with route management & earnings tracking; and Pickup app for in-store order handling & inventory management.",
+      ar: "منصة بقالة متكاملة من 3 تطبيقات مترابطة: تطبيق العملاء لتصفح المنتجات والسلة والطلب، تطبيق التوصيل للسائقين مع إدارة المسارات وتتبع الأرباح، وتطبيق الاستلام لإدارة الطلبات والمخزون داخل المتجر.",
     },
     features: {
-      en: ["Product categories", "Shopping cart", "Order management", "Delivery addresses", "Promo ads", "Secure checkout"],
-      ar: ["تصنيفات المنتجات", "سلة التسوق", "إدارة الطلبات", "عناوين التوصيل", "إعلانات ترويجية", "دفع آمن"],
+      en: ["3 interconnected apps", "Product browsing & cart", "Driver route management", "Pickup order handling", "Real-time tracking", "Promo system"],
+      ar: ["3 تطبيقات مترابطة", "تصفح المنتجات والسلة", "إدارة مسارات السائقين", "إدارة طلبات الاستلام", "تتبع فوري", "نظام ترويجي"],
     },
   },
   "greenz-delivery": {
@@ -209,14 +209,14 @@ const projectData = {
   },
   almalek: {
     name: { en: "Almalek Exchange", ar: "المالك للصرافة" },
-    badge: { en: "Currency Exchange", ar: "صرافة" },
+    badge: { en: "Fintech", ar: "تكنولوجيا مالية" },
     desc: {
-      en: "Currency exchange platform with live rate charts, OTP verification, transaction history, multi-currency conversion tools, and real-time market data.",
-      ar: "منصة تحويل العملات مع رسوم بيانية مباشرة، تحقق OTP، سجل المعاملات، أدوات تحويل متعددة العملات، وبيانات سوق فورية.",
+      en: "Currency exchange & money transfer platform with live rate charts, OTP verification, transaction history, interactive analytics, Firebase auth, payment processing, and multi-currency conversion tools.",
+      ar: "منصة تحويل العملات والأموال مع رسوم بيانية مباشرة، تحقق OTP، سجل المعاملات، تحليلات تفاعلية، مصادقة Firebase، معالجة المدفوعات، وأدوات تحويل متعددة العملات.",
     },
     features: {
-      en: ["Live rate charts", "OTP verification", "Transaction history", "Multi-currency", "Real-time data", "Bloc architecture"],
-      ar: ["رسوم بيانية مباشرة", "تحقق OTP", "سجل المعاملات", "متعدد العملات", "بيانات فورية", "هندسة Bloc"],
+      en: ["Live rate charts", "Money transfers", "OTP verification", "Firebase Auth", "Transaction tracking", "Interactive analytics"],
+      ar: ["رسوم بيانية مباشرة", "تحويل الأموال", "تحقق OTP", "مصادقة Firebase", "تتبع المعاملات", "تحليلات تفاعلية"],
     },
   },
   mbex: {
