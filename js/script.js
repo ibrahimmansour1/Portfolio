@@ -92,6 +92,15 @@ const translations = {
   "form-message": { en: "Your Message", ar: "رسالتك" },
   "form-send": { en: "Send Message", ar: "إرسال الرسالة" },
 
+  // Contact labels
+  "cl-email": { en: "Email", ar: "البريد الإلكتروني" },
+  "cl-whatsapp": { en: "WhatsApp", ar: "واتساب" },
+  "cl-linkedin": { en: "LinkedIn", ar: "لينكد إن" },
+  "cl-linkedin-val": { en: "Ibrahim Mansour", ar: "إبراهيم منصور" },
+  "cl-github": { en: "GitHub", ar: "جيت هب" },
+  "cl-youtube": { en: "YouTube", ar: "يوتيوب" },
+  "cl-youtube-val": { en: "Ibrahim Mansour", ar: "إبراهيم منصور" },
+
   // Footer
   "footer-copy": { en: "© 2026 Ibrahim Mansour. All rights reserved.", ar: "© 2026 إبراهيم منصور. جميع الحقوق محفوظة." },
 

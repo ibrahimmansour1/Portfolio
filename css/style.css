@@ -218,6 +218,10 @@ section {
   font-family: var(--font-en);
 }
 
+.lang-toggle button[data-lang="ar"] {
+  font-family: var(--font-ar);
+}
+
 .lang-toggle button.active {
   background: var(--accent);
   color: #fff;
@@ -473,6 +477,8 @@ body.rtl .hero-name {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 @keyframes heroFloat {
@@ -511,6 +517,8 @@ body.rtl .hero-name {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .about-text h3 {
