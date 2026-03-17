@@ -15,6 +15,7 @@ const translations = {
   "nav-contact": { en: "Contact", ar: "تواصل" },
 
   // Hero
+  "hero-status": { en: "Available for hire", ar: "متاح للعمل" },
   "hero-greeting": { en: "Hello, I'm", ar: "مرحباً، أنا" },
   "hero-name": { en: "Ibrahim Mansour", ar: "إبراهيم منصور" },
   "hero-desc": {
@@ -904,6 +905,54 @@ document.querySelectorAll(".lang-toggle button").forEach((btn) => {
     setLanguage(btn.getAttribute("data-lang"));
   });
 });
+
+// ==========================================
+// SCROLL PROGRESS BAR
+// ==========================================
+const scrollProgress = document.getElementById("scroll-progress");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  scrollProgress.style.width = scrollPercent + "%";
+});
+
+// ==========================================
+// ANIMATED COUNTER
+// ==========================================
+function animateCounters() {
+  const counters = document.querySelectorAll(".stat-number");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.dataset.counted) {
+          entry.target.dataset.counted = "true";
+          const text = entry.target.textContent;
+          const target = parseInt(text);
+          const suffix = text.replace(/[0-9]/g, "");
+          let current = 0;
+          const duration = 1500;
+          const step = target / (duration / 16);
+
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            entry.target.textContent = Math.floor(current) + suffix;
+          }, 16);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach((c) => observer.observe(c));
+}
+
+animateCounters();
 
 // Initialize
 updateVisibleCount();
