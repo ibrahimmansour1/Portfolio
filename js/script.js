@@ -60,9 +60,9 @@ const translations = {
 
   // Projects
   "projects-tag": { en: "My work", ar: "أعمالي" },
-  "projects-title-1": { en: "Projects ", ar: "معرض " },
-  "projects-title-2": { en: "Portfolio", ar: "المشاريع" },
-  "projects-subtitle": { en: "25+ projects delivered across multiple industries", ar: "أكثر من 25 مشروع تم تسليمه في مختلف المجالات" },
+  "projects-title-1": { en: "Featured ", ar: "أبرز " },
+  "projects-title-2": { en: "Projects", ar: "المشاريع" },
+  "projects-subtitle": { en: "Hand-picked from 25+ delivered projects", ar: "مختارة من أكثر من 25 مشروع تم تسليمه" },
   "filter-all": { en: "All", ar: "الكل" },
   "filter-travel": { en: "Travel & Real Estate", ar: "السفر والعقارات" },
   "filter-food": { en: "Food & Delivery", ar: "الطعام والتوصيل" },
@@ -810,37 +810,9 @@ function initTyped() {
 initTyped();
 
 // ==========================================
-// PROJECT FILTERING
+// PROJECT CARDS
 // ==========================================
-const filterBtns = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
-
-function updateVisibleCount() {
-  const visible = document.querySelectorAll(".project-card:not(.hidden)").length;
-  const countEl = document.getElementById("visible-count");
-  if (countEl) countEl.textContent = visible;
-}
-
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterBtns.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const filter = btn.getAttribute("data-filter");
-
-    projectCards.forEach((card, index) => {
-      const category = card.getAttribute("data-category");
-      const show = filter === "all" || category === filter;
-      card.classList.toggle("hidden", !show);
-
-      if (show) {
-        card.style.transitionDelay = `${index * 0.03}s`;
-      }
-    });
-
-    updateVisibleCount();
-  });
-});
 
 // ==========================================
 // PROJECT DETAIL MODAL
@@ -964,4 +936,3 @@ function animateCounters() {
 animateCounters();
 
 // Initialize
-updateVisibleCount();

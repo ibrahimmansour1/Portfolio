@@ -693,6 +693,33 @@ body.rtl .about-text h3 { letter-spacing: 0; }
   margin: 0 auto;
 }
 
+.projects-grid.featured-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.8rem;
+  max-width: 96rem;
+}
+
+.featured-grid .project-card-header {
+  height: 18rem;
+}
+
+.featured-grid .project-card-header i {
+  font-size: 6.5rem;
+}
+
+.featured-grid .project-info {
+  padding: 2.4rem 2.8rem;
+}
+
+.featured-grid .project-info h3 {
+  font-size: 2.2rem;
+}
+
+.featured-grid .project-info p {
+  font-size: 1.35rem;
+  -webkit-line-clamp: 4;
+}
+
 .project-card {
   background: var(--bg-card);
   border: 1.5px solid var(--border);
@@ -1263,6 +1290,7 @@ body.rtl .contact-form .btn { align-self: flex-end; }
   .about-stats { justify-content: center; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: 1fr; max-width: 50rem; }
+  .projects-grid.featured-grid { grid-template-columns: 1fr; max-width: 50rem; }
   .contact { border-radius: 0; }
   .contact-grid { grid-template-columns: 1fr; }
   .form-row { flex-direction: column; }
