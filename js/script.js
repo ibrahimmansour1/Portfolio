@@ -30,8 +30,8 @@ const translations = {
   "about-title-1": { en: "About ", ar: "عن " },
   "about-title-2": { en: "Me", ar: "نفسي" },
   "about-h3": {
-    en: "Flutter Developer with 2+ Years of Experience",
-    ar: "مطور Flutter بخبرة تتجاوز سنتين",
+    en: "Flutter Developer with Nearly 4 Years of Experience",
+    ar: "مطور Flutter بخبرة تقارب الأربع سنوات",
   },
   "about-p1": {
     en: "I'm a passionate mobile developer based in Cairo, Egypt, specializing in building cross-platform applications using Flutter & Dart. I focus on creating clean, scalable code with modern architectures like Clean Architecture and MVVM.",
