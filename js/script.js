@@ -339,30 +339,6 @@ const projectData = {
       ar: ["نظام التذاكر", "تتبع الوحدات", "الأخبار", "إشعارات فورية", "رسائل Firebase", "متعدد اللغات"],
     },
   },
-  nibni: {
-    name: { en: "Nibni System", ar: "نظام نبني" },
-    badge: { en: "Construction", ar: "بناء" },
-    desc: {
-      en: "Construction & building management system with maps integration, document management, progress tracking, push notifications, and GoRouter navigation.",
-      ar: "نظام إدارة البناء والتشييد مع تكامل الخرائط، إدارة المستندات، تتبع التقدم، إشعارات فورية، وتنقل GoRouter.",
-    },
-    features: {
-      en: ["Maps integration", "Document management", "Progress tracking", "Push notifications", "Bloc + Freezed", "GoRouter"],
-      ar: ["تكامل الخرائط", "إدارة المستندات", "تتبع التقدم", "إشعارات فورية", "Bloc + Freezed", "GoRouter"],
-    },
-  },
-  tawabeq: {
-    name: { en: "Tawabeq", ar: "طوابق" },
-    badge: { en: "Document Mgmt", ar: "إدارة مستندات" },
-    desc: {
-      en: "Document management app with file browsing, image handling, pagination, organized document categorization, and Provider state management.",
-      ar: "تطبيق إدارة المستندات مع تصفح الملفات، معالجة الصور، التصفح المرقم، تصنيف المستندات، وإدارة الحالة Provider.",
-    },
-    features: {
-      en: ["File browsing", "Image handling", "Pagination", "Categorization", "Firebase backend", "Provider state"],
-      ar: ["تصفح الملفات", "معالجة الصور", "التصفح المرقم", "التصنيف", "خادم Firebase", "حالة Provider"],
-    },
-  },
   pos: {
     name: { en: "POS App", ar: "نقطة البيع" },
     badge: { en: "Retail", ar: "تجزئة" },
