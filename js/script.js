@@ -30,8 +30,8 @@ const translations = {
   "about-title-1": { en: "About ", ar: "عن " },
   "about-title-2": { en: "Me", ar: "نفسي" },
   "about-h3": {
-    en: "Flutter Developer with Nearly 4 Years of Experience",
-    ar: "مطور Flutter بخبرة تقارب الأربع سنوات",
+    en: "Flutter Developer with Over 3 Years of Experience",
+    ar: "مطور Flutter بخبرة تزيد عن ثلاث سنوات",
   },
   "about-p1": {
     en: "I'm a passionate mobile developer based in Cairo, Egypt, specializing in building cross-platform applications using Flutter & Dart. I focus on creating clean, scalable code with modern architectures like Clean Architecture and MVVM.",
@@ -205,6 +205,30 @@ const projectData = {
     features: {
       en: ["Pickup management", "Inventory tracking", "Customer notifications", "Order processing", "Real-time updates", "Store management"],
       ar: ["إدارة الاستلام", "تتبع المخزون", "إشعارات العملاء", "معالجة الطلبات", "تحديثات فورية", "إدارة المتجر"],
+    },
+  },
+  nibni: {
+    name: { en: "Nibni", ar: "نبني" },
+    badge: { en: "Real Estate", ar: "عقارات" },
+    desc: {
+      en: "Real estate platform for owners, developers, brokers and investors. Owners control inventory and pricing, while brokers and sales teams share one workflow for leads, reservations and reporting. Live on the App Store in Arabic and English.",
+      ar: "منصة عقارية للملاك والمطورين والوسطاء والمستثمرين. يتحكم الملاك في المخزون والأسعار، ويعمل الوسطاء وفرق المبيعات ضمن سير عمل واحد لإدارة العملاء المحتملين والحجوزات والتقارير. متاح على App Store بالعربية والإنجليزية.",
+    },
+    features: {
+      en: ["Inventory & pricing control", "Lead management", "Reservations", "Sales reporting", "Push notifications", "Arabic & English"],
+      ar: ["التحكم في المخزون والأسعار", "إدارة العملاء المحتملين", "الحجوزات", "تقارير المبيعات", "إشعارات فورية", "العربية والإنجليزية"],
+    },
+  },
+  tawabeq: {
+    name: { en: "Tawabeq", ar: "طوابق" },
+    badge: { en: "Construction", ar: "بناء" },
+    desc: {
+      en: "Home-building app covering the journey from initial design to construction: plan your home, compare building-material offers, and manage purchasing, delivery and execution in one place. Live on the App Store in Arabic and English.",
+      ar: "تطبيق لبناء المنزل يغطي الرحلة من التصميم الأولي حتى التنفيذ: خطط منزلك، قارن عروض مواد البناء، وأدر الشراء والتوصيل والتنفيذ في مكان واحد. متاح على App Store بالعربية والإنجليزية.",
+    },
+    features: {
+      en: ["Home design planning", "Material offers", "Purchasing", "Delivery tracking", "Execution management", "Arabic & English"],
+      ar: ["تخطيط تصميم المنزل", "عروض مواد البناء", "الشراء", "متابعة التوصيل", "إدارة التنفيذ", "العربية والإنجليزية"],
     },
   },
   almalek: {
