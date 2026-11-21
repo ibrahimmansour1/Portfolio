@@ -38,12 +38,12 @@ const translations = {
     ar: "أنا مطور تطبيقات جوال شغوف من القاهرة، مصر. متخصص في بناء تطبيقات متعددة المنصات باستخدام Flutter و Dart. أركز على كتابة كود نظيف وقابل للتوسع باستخدام أنماط معمارية حديثة مثل Clean Architecture و MVVM.",
   },
   "about-p2": {
-    en: "I've delivered 25+ projects across diverse industries — from travel booking platforms and fintech apps to healthcare systems, e-commerce marketplaces, and Islamic educational tools. I thrive on challenging projects and always deliver high-quality, user-focused products.",
-    ar: "قدمت أكثر من 25 مشروعاً في مختلف المجالات — من منصات حجز السفر وتطبيقات التكنولوجيا المالية إلى أنظمة الرعاية الصحية والأسواق الإلكترونية والتطبيقات التعليمية الإسلامية. أستمتع بالتحديات وأسعى دائماً لتقديم منتجات عالية الجودة.",
+    en: "I've delivered 20+ apps, 7 of them live on the stores, across diverse industries — from travel booking platforms and fintech apps to healthcare systems, e-commerce marketplaces, and Islamic educational tools. I thrive on challenging projects and always deliver high-quality, user-focused products.",
+    ar: "قدمت أكثر من 20 تطبيقاً، منها 7 منشورة على المتاجر، في مختلف المجالات — من منصات حجز السفر وتطبيقات التكنولوجيا المالية إلى أنظمة الرعاية الصحية والأسواق الإلكترونية والتطبيقات التعليمية الإسلامية. أستمتع بالتحديات وأسعى دائماً لتقديم منتجات عالية الجودة.",
   },
   "stat-years": { en: "Years Experience", ar: "سنوات خبرة" },
-  "stat-projects": { en: "Projects Delivered", ar: "مشروع تم تسليمه" },
-  "stat-clients": { en: "Happy Clients", ar: "عميل سعيد" },
+  "stat-projects": { en: "Apps Delivered", ar: "تطبيق تم تسليمه" },
+  "stat-clients": { en: "Live on the Stores", ar: "تطبيقات منشورة على المتاجر" },
 
   // Skills
   "skills-tag": { en: "What I work with", ar: "ما أعمل به" },
@@ -62,7 +62,7 @@ const translations = {
   "projects-tag": { en: "My work", ar: "أعمالي" },
   "projects-title-1": { en: "Featured ", ar: "أبرز " },
   "projects-title-2": { en: "Projects", ar: "المشاريع" },
-  "projects-subtitle": { en: "Hand-picked from 25+ delivered projects", ar: "مختارة من أكثر من 25 مشروع تم تسليمه" },
+  "projects-subtitle": { en: "Hand-picked from 20+ delivered apps", ar: "مختارة من أكثر من 20 تطبيقاً تم تسليمه" },
   "filter-all": { en: "All", ar: "الكل" },
   "filter-travel": { en: "Travel & Real Estate", ar: "السفر والعقارات" },
   "filter-food": { en: "Food & Delivery", ar: "الطعام والتوصيل" },
